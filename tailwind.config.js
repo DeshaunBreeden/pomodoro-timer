@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports =  {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fonFamily: {
+      fontFamily: ["Montserrat", "sans-serif"],
+    },
     colors: {
       'pmd-blue-100': '#FCEDDA',
       'pmd-blue-600': '#EE4E34',     
@@ -12,5 +15,5 @@ export default {
     extend: {},
   },
   plugins: [],
-}
+};
 

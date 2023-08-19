@@ -1,10 +1,18 @@
 import { useState } from 'react'
-import Ptimer from "./PTimer"
+import Ptimer from "./Components/PTimer"
+import Labels from './Components/Labels';
 
 function App() {
+  const [selectedControl, setSectedControl] = useState(0);
   return (
     <>
-    <Ptimer/>
+    <Labels 
+    selected={selectedControl}
+    handleEvent={(e) => {
+      setSectedControl(e);
+    }}
+    />
+    <Ptimer selected={selectedControl} />
     </>
   );
 }
