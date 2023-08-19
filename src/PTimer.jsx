@@ -51,5 +51,5 @@ const Timer = () => {
     );
 };
 
-export default PTimer;
+export default Timer;
 
