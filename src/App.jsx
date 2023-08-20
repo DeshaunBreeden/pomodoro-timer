@@ -1,20 +1,33 @@
-import { useState } from 'react'
-import Ptimer from "./Components/PTimer"
-import Labels from './Components/Labels';
+import DisplayTime from "./Components/DisplayTime";
+import ToggleButton from "./Components/ToggleButton";
+import useTimer from "./hooks/useTimer";
 
-function App() {
-  const [selectedControl, setSectedControl] = useState(0);
+const App = () => {
+  const { Pomodoro, selectedControl, setPomodoro, setSectedControl } = useTimer();
+
   return (
     <>
-    <Labels 
-    selected={selectedControl}
-    handleEvent={(e) => {
-      setSectedControl(e);
-    }}
-    />
-    <Ptimer selected={selectedControl} />
+      <Labels
+        selectedControl={selectedControl}
+        setSectedControl={setSectedControl}
+      />
+
+      <div className="tw-timer-container">
+        <div className="tw-timer">
+          <div className="flex flex-col justify-center items-center font-semibold">
+              <DisplayTime>
+                Pomodoro={Pomodoro}
+                selectedControl={selectedControl}
+              </DisplayTime>
+              <ToggleButton>
+                Pomodoro={Pomodoro}
+                setPomodoro={setPomodoro}
+              </ToggleButton>
+          </div>
+        </div>
+      </div>
     </>
   );
-}
+};
 
 export default App

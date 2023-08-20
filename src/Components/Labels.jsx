@@ -1,19 +1,18 @@
 import React from "react";
+import { controllers } from "../constants/constants";
 
-const Labels = ({selected, handleEvent}) => {
-    const controllers = [
-        { label: "Pomodoro", value: "pomodoroTime" },
-        { label: "Short Break", value: "shortBreakTime" },
-        { label: "Long Break", value: "longBreakTime" },
-    ];
+const Labels = ({selectedControl, setSelectedControl}) => {
+    function handleSelectedControl(index){
+        setSelectedControl(index);
+    }
 
     return (
         <ul className = "tw-infoContainer">
             {controllers.map((controller, index) => (
                 <li
                 key={index}
-                className={`tw-infoItem ${selected === index && "active"}`}
-                onClick={() => handleEvent(index)}>
+                className={`tw-infoItem ${selectedControl === index && "active"}`}
+                onClick={() => handleSelectedControl(index)}>
                 {controller.label}
                 </li>
             ))}
