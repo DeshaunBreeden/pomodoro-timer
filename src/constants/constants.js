@@ -9,5 +9,5 @@ export const stages = {
     shortBreakTime: 5 * 60,
     longBreakTime: 15 * 60,
     isPaused: true,
-    period: 4,
+    period: 1,
 };

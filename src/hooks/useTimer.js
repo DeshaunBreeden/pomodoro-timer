@@ -5,32 +5,49 @@ const useTimer = () => {
     const [selectedControl, setSelectedControl] = useState(0);
     const [ Pomodoro, setPomodoro ] = useState(stages);
 
+    const getRemainingTimePercentage = () => {
+        const totalTime = stages[controllers[selectedControl].value];
+        const remainingTime = Pomodoro[controllers[selectedControl].value];
+        return (remainingTime / totalTime) * 100;
+    };
+
+    const resetTimerValues = () => {
+        setPomodoro((prevPomodoro) => ({
+            ...prevPomodoro,
+            pomodoroTime: stages.pomodoroTime,
+            shortBreakTime: stages.shortBreakTime,
+            longBreakTime: stages.longBreakTime,
+        }));
+    };
+
     useEffect(() => {
-        const stageValue = controllers[selectedControl].value;
         let timer = null;
 
         if (!Pomodoro.isPaused) {
             timer = setInterval(() => {
                 setPomodoro((prevPomodoro) => {
-                    if (prevPomodoro[stageValue] === 0) {
+                    if (prevPomodoro[controllers[selectedControl].value] === 0) {
                         setSelectedControl((prevState) => {
                             return prevState < controllers.length - 1 ? prevState + 1 : 0;
                         });
+                        resetTimerValues();
                         clearInterval(timer);
                         return prevPomodoro;
                     }
                     return {
                         ...prevPomodoro,
-                        [stageValue] : prevPomodoro[stageValue] - 1,
+                        [controllers[selectedControl].value] : prevPomodoro[controllers[selectedControl].value] - 1,
                     };
                 });
             }, 1000);
         }
 
-        return () => clearInterval(timer);
+        return () => {
+            clearInterval(timer);
+        };
     }, [Pomodoro.isPaused, selectedControl, setPomodoro, setSelectedControl]);
 
-    return { Pomodoro, setPomodoro, selectedControl, setSelectedControl };
+    return { Pomodoro, setPomodoro, selectedControl, setSelectedControl, getRemainingTimePercentage, resetTimerValues };
 };
 
 export default useTimer;
