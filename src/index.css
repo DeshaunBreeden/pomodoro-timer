@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,16 +10,16 @@
   }
 }
 
-@layer components{
-  .tw-ptimer-container{
+@layer components {
+  .tw-ptimer-container {
     @apply w-[20rem] h-[20rem] flex justify-center items-center rounded-full bg-gradient-to-t to-pmd-blue-600 from-pmd-blue-900  shadow-2xl shadow-pmd-blue-600;
   }
 
-  .tw-ptimer{
+  .tw-ptimer {
     @apply w-[17rem] h-[17rem] flex justify-center items-center rounded-full text-6xl bg-pmd-blue-900;
   }
 
-  .tw-infoContainer{
+  .tw-infoContainer {
     @apply p-3 text-pmd-blue-300 font-semibold rounded-full text-xs flex-1 text-center;
   }
 
@@ -26,7 +27,7 @@
     @apply p-3 text-pmd-blue-300 font-semibold rounded-full text-xs flex-1 text-center whitespace-nowrap cursor-pointer;
   }
 
-  .tw-infoItem.active{
+  .tw-infoItem.active {
     @apply bg-pmd-red-700 text-pmd-blue-800;
   }
 }

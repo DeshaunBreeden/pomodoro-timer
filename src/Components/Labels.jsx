@@ -12,8 +12,9 @@ const Labels = ({selectedControl, setSelectedControl, resetTimerValues}) => {
             {controllers.map((controller, index) => (
                 <li
                 key={index}
-                className={`tw-infoItem ${selectedControl === index && "active"}`}
-                onClick={() => handleSelectedControl(index)}>
+                className={`tw-infoItem ${selectedControl === index ? "active" : ""}`}
+                onClick={() => handleSelectedControl(index)}
+                >
                 {controller.label}
                 </li>
             ))}

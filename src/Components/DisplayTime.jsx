@@ -6,9 +6,8 @@ const DisplayTime = ({ Pomodoro, selectedControl }) => {
 
     return (
         <>
-        {minutes < 9 ? "0" : ""}
-        {minutes}:{seconds < 9 ? "0" : ""}
-        {seconds}
+        {minutes < 9 ? "0" + minutes : minutes}:
+        {seconds < 10 ? "0" + seconds : seconds}
         </>
     );
 };
