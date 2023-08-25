@@ -31,6 +31,21 @@ const Modal = ({ isSettingsOn, setIsSettingsOn, setPomodoro }) => {
         }));
     }
 
+    function handleOutsideClick(e) {
+        if (modalRef.current && !modalRef.current.contains(e.target)) {
+            setIsSettingsOn(false);
+        }
+    }
+
+    useEffect(() => {
+        console.log(modalRef.current);
+        document.addEventListener("mousedown", handleOutsideClick);
+
+        return () => {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        };
+    }, [modalRef.current]);
+
     return (
 
         <>
