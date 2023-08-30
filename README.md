@@ -30,16 +30,19 @@ Use this Pomodoro Timer to boost your productivity and stay on top of your tasks
 To get started with the Pomodoro Timer, follow these steps:
 
 1. Clone this repository to your local machine.
-- git clone https://github.com/your-username/pomodoro-timer.git
-2. Navigate to the project directory.
-- cd pomodoro-timer
-3. Install the required dependencies.
-- npm install
-4. Start the development server.
-- npm run dev
+git clone https://github.com/your-username/pomodoro-timer.git
+
+3. Navigate to the project directory.
+cd pomodoro-timer
+
+5. Install the required dependencies.
+npm install
+
+7. Start the development server.
+npm run dev
 
 ## Customization
-- You can customize the time settings of the Pomodoro Timer to suit your preferences. Follow these steps to make changes:
+You can customize the time settings of the Pomodoro Timer to suit your preferences. Follow these steps to make changes:
 
 1. Open the settings menu by clicking the settings icon below the timer.
 2. Adjust the duration of the Pomodoro, Short Break, and Long Break.
@@ -48,10 +51,10 @@ To get started with the Pomodoro Timer, follow these steps:
 ## Technologies Used
 This Pomodoro Timer was created using the following technologies:
 
-- React.js: A JavaScript library for building user interfaces.
-- Tailwind CSS: A utility-first CSS framework for building stylish and responsive web designs.
-- Node.js: A JavaScript runtime environment for server-side applications.
-- Vite: A fast build tool and development server for modern web apps.
+- **React.js:** A JavaScript library for building user interfaces.
+- **Tailwind CSS:** A utility-first CSS framework for building stylish and responsive web designs.
+- **Node.js:** A JavaScript runtime environment for server-side applications.
+- **Vite:** A fast-build tool and development server for modern web apps.
 
 ## Contributing
 We welcome contributions from the community. If you'd like to contribute to the development of this Pomodoro Timer please feel welcome to.
