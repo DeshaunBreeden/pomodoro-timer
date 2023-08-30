@@ -30,7 +30,7 @@ Use this Pomodoro Timer to boost your productivity and stay on top of your tasks
 To get started with the Pomodoro Timer, follow these steps:
 
 1. Clone this repository to your local machine.
-git clone https://github.com/your-username/pomodoro-timer.git
+git clone https://github.com/DeshaunBreeden/pomodoro-timer.git
 
 3. Navigate to the project directory.
 cd pomodoro-timer
