@@ -1,11 +1,11 @@
 export const controllers = [
-    { label: "pomodoro", value: "pomodoroTime" },
-    { label: "short break", value: "shortBreakTime" },
-    { label: "long break", value: "longBreakTime" },
+    { label: "Pomodoro", value: "PomodoroTime" },
+    { label: "Short Break", value: "shortBreakTime" },
+    { label: "Long Break", value: "longBreakTime" },
 ];
 
 export const stages = {
-    pomodoroTime: 25 * 60,
+    PomodoroTime: 25 * 60,
     shortBreakTime: 5 * 60,
     longBreakTime: 15 * 60,
     isPaused: true,

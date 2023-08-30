@@ -8,14 +8,14 @@ module.exports = {
 
     extend: {
       colors: {
-        "pmd-blue-50": "#eef1fa",
-        "pmd-blue-100": "#d9e4ff",
-        "pmd-blue-300": "#666a83",
-        "pmd-blue-600": "#262a57",
-        "pmd-blue-800": "#1e2140",
-        "pmd-blue-900": "#151932",
-        "pmd-red-600": "#f38a8b",
-        "pmd-red-700": "#f87070",
+        "pmd-blue-50": "#EE4E34",
+        "pmd-blue-100": "#EE4E34",
+        "pmd-blue-300": "#EE4E34",
+        "pmd-blue-600": "#EE4E34",
+        "pmd-blue-800": "#FCEDDA",
+        "pmd-blue-900": "#FCEDDA",
+        "pmd-red-600": "#FCEDDA",
+        "pmd-red-700": "#FCEDDA",
       },
     },
   },

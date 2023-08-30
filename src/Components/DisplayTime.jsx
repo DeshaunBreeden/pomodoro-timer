@@ -1,15 +1,15 @@
-import { controllers } from "../constants/constants";
+import React from "react";
+import useCalculateTime from "../hooks/useCalculateTime";
 
 const DisplayTime = ({ Pomodoro, selectedControl }) => {
-    const minutes = Math.floor(Pomodoro[controllers[selectedControl].value] / 60);
-    const seconds = Math.floor(Pomodoro[controllers[selectedControl].value] % 60)
+  const { minutes, seconds } = useCalculateTime({ Pomodoro, selectedControl });
 
-    return (
-        <>
-        {minutes < 9 ? "0" + minutes : minutes}:
-        {seconds < 10 ? "0" + seconds : seconds}
-        </>
-    );
+  const formattedMinutes = String(minutes).padStart(2, "0");
+  const formattedSeconds = String(seconds).padStart(2, "0");
+
+  return (
+    <>{formattedMinutes}:{formattedSeconds}</>
+  );
 };
 
 export default DisplayTime;

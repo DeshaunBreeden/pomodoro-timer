@@ -28,6 +28,6 @@
   }
 
   .tw-infoItem.active {
-    @apply bg-pmd-red-700 text-pmd-blue-800;
+    @apply bg-pmd-blue-600 text-pmd-blue-800;
   }
 }
