@@ -1,6 +1,6 @@
 # Pomodoro Timer
 
-![Pomodoro Timer](PomdoroTimerScreenshot.png)
+![Pomodoro Timer](PomodoroTimerScreenshot.png)
 
 ## Table of Contents
 - [Introduction](#introduction)
