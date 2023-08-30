@@ -3,6 +3,7 @@ import Labels from "./Components/Labels";
 import TimeDisplay from "./Components/DisplayTime";
 import ToggleButton from "./Components/ToggleButton";
 import Modal from "./Components/settingsModal";
+import CurrentTaskInput from "./Components/CurrentTaskInput";
 import useTimer from "./hooks/useTimer";
 import useCalculateTime from "./hooks/useCalculateTime";
 import { controllers } from "./constants/constants";
@@ -23,6 +24,8 @@ const App = () => {
   const { minutes, seconds } = useCalculateTime({ Pomodoro, selectedControl });
 
   const [isSettingsOn, setIsSettingsOn] = useState(false);
+
+  const [currentTask, setCurrentTask] = useState(" ");
 
   document.title = `${controllers[selectedControl].label} - ${minutes < 9 ? "0" : ""}${minutes}:${seconds < 9 ? "0" : ""}${seconds}`;
 
@@ -76,6 +79,8 @@ const App = () => {
         setIsSettingsOn={setIsSettingsOn}
         setPomodoro={setPomodoro}
       />
+
+<CurrentTaskInput currentTask={currentTask} setCurrentTask={setCurrentTask} />
     </main>
   );
 };

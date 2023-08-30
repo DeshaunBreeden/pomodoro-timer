@@ -30,4 +30,25 @@
   .tw-infoItem.active {
     @apply bg-pmd-blue-600 text-pmd-blue-800;
   }
+  .current-task-container {
+    margin-top: 20px;
+  }
+  
+  .current-task-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .placeholder-pmd-red-700::placeholder {
+    color: #FCEDDA;
+  }
+  
+  .current-task {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666a83;
+  }
+  
 }
